@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/buy" />
+
+    <TextView
+        android:id="@+id/textView_show_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/dark_green"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView_icon"
+        app:layout_constraintTop_toTopOf="@+id/imageView_icon"
+        tools:text="text" />
+
+    <TextView
+        android:id="@+id/textView_show_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="text"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/dark_green"
+        app:layout_constraintStart_toStartOf="@+id/textView_show_item"
+        app:layout_constraintTop_toBottomOf="@+id/textView_show_item"/>
+
+    <TextView
+        android:id="@+id/textView_show_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="text"
+        android:textSize="14sp"
+        android:textColor="@color/dark_green"
+        app:layout_constraintStart_toEndOf="@+id/textView_show_quantity"
+        app:layout_constraintEnd_toStartOf="@+id/textView_dateBoughtText"
+        app:layout_constraintTop_toTopOf="@+id/textView_show_quantity" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/Switch_bought"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bought"
+        android:textColor="@color/dark_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_icon"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/textView_dateBoughtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="text"
+        android:textSize="14sp"
+        android:textColor="@color/dark_green"
+        app:layout_constraintStart_toEndOf="@+id/textView_show_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_show_quantity"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

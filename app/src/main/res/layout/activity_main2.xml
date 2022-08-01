@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_toolbar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/add_items"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintStart_toStartOf="@+id/toolbar2"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2"
+        tools:text="@string/add_items" />
+
+    <TextView
+        android:id="@+id/textView_shopping_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/item"
+        android:textColor="@color/dark_green"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <EditText
+        android:id="@+id/editTextShoppingItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:ems="12"
+        android:hint="@string/shopping_item"
+        android:inputType="textPersonName"
+        android:textColor="@color/dark_green"
+        android:textColorHint="@color/dark_green"
+        android:background="@drawable/text_area_border"
+        app:layout_constraintStart_toStartOf="@+id/textView_shopping_items"
+        app:layout_constraintTop_toBottomOf="@+id/textView_shopping_items" />
+
+    <TextView
+        android:id="@+id/textView_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/details"
+        android:textColor="@color/dark_green"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/editTextShoppingItem"
+        app:layout_constraintTop_toBottomOf="@+id/editTextShoppingItem" />
+
+    <EditText
+        android:id="@+id/editText_multiline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/text_area_border"
+        android:ems="12"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="@+id/textView_details"
+        app:layout_constraintTop_toBottomOf="@+id/textView_details"
+        tools:text="" />
+
+    <TextView
+        android:id="@+id/textView_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/quantity"
+        android:textColor="@color/dark_green"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/editText_multiline"
+        app:layout_constraintTop_toBottomOf="@+id/editText_multiline" />
+
+    <TextView
+        android:id="@+id/textView_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/size"
+        android:textColor="@color/dark_green"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView_quantity"
+        app:layout_constraintTop_toBottomOf="@+id/editText_multiline" />
+
+    <ImageButton
+        android:id="@+id/imageButton_arrow_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_number"
+        app:layout_constraintStart_toStartOf="@+id/textView_quantity"
+        app:layout_constraintTop_toTopOf="@+id/editText_number"
+        app:srcCompat="@drawable/arrow_down" />
+
+    <EditText
+        android:id="@+id/editText_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/text_area_border"
+        android:ems="2"
+        android:inputType="number"
+        android:padding="5dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_arrow_down"
+        app:layout_constraintTop_toBottomOf="@+id/textView_quantity"
+        tools:text="" />
+
+    <ImageButton
+        android:id="@+id/imageButton_arrow_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_number"
+        app:layout_constraintStart_toEndOf="@+id/editText_number"
+        app:layout_constraintTop_toTopOf="@+id/editText_number"
+        app:srcCompat="@drawable/arrow_up" />
+
+    <Spinner
+        android:id="@+id/spinner_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_area_border"
+        android:prompt="@string/size"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_number"
+        app:layout_constraintEnd_toEndOf="@+id/editText_multiline"
+        app:layout_constraintStart_toStartOf="@+id/textView_size"
+        app:layout_constraintTop_toTopOf="@+id/editText_number" />
+
+    <CheckBox
+        android:id="@+id/checkBox_urgent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/urgent"
+        android:textColor="@color/dark_green"
+        android:textColorHighlight="@color/dark_green"
+        android:textColorHint="@color/dark_green"
+        android:textColorLink="@color/dark_green"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageButton_arrow_down"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_arrow_down" />
+
+    <Button
+        android:id="@+id/button_addToList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/button_style"
+        android:ems="12"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_urgent"
+        tools:text="@string/add_to_list"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

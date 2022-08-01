@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_toolbar3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/display_items"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
+        app:layout_constraintStart_toStartOf="@+id/toolbar3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:background="@color/light_green"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/edit_icon" />
+
+    <TextView
+        android:id="@+id/textView_shopping_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/shopping_item"
+        android:textColor="@color/dark_green"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
+
+    <TextView
+        android:id="@+id/textView_display_itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/text_area_border"
+        android:ems="12"
+        android:padding="5dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textView_shopping_items"
+        app:layout_constraintTop_toBottomOf="@+id/textView_shopping_items" />
+
+    <TextView
+        android:id="@+id/textView_details2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/detail"
+        android:textColor="@color/dark_green"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView_shopping_items"
+        app:layout_constraintTop_toBottomOf="@+id/textView_display_itemName" />
+
+    <TextView
+        android:id="@+id/textView_display_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/text_area_border"
+        android:ems="12"
+        android:gravity="start|top"
+        android:lines="5"
+        android:padding="5dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textView_shopping_items"
+        app:layout_constraintTop_toBottomOf="@+id/textView_details2" />
+
+    <TextView
+        android:id="@+id/textView_quantity2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:text="@string/quantity"
+        android:textColor="@color/dark_green"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_display_number"
+        app:layout_constraintStart_toStartOf="@+id/textView_shopping_items"
+        app:layout_constraintTop_toTopOf="@+id/textView_display_number" />
+
+    <TextView
+        android:id="@+id/textView_display_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/text_area_border"
+        android:ems="2"
+        android:padding="5dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView_quantity2"
+        app:layout_constraintTop_toBottomOf="@+id/textView_display_details" />
+
+    <TextView
+        android:id="@+id/textView_size2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="@string/size"
+        android:textColor="@color/dark_green"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_display_size"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/textView_display_number"
+        app:layout_constraintTop_toTopOf="@+id/textView_display_size" />
+
+
+    <TextView
+        android:id="@+id/textView_display_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/text_area_border"
+        android:ems="6"
+        android:padding="5dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView_size2"
+        app:layout_constraintTop_toBottomOf="@+id/textView_display_details" />
+
+    <TextView
+        android:id="@+id/textView_urgent2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/urgent"
+        android:textColor="@color/dark_green"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_urgent"
+        app:layout_constraintStart_toStartOf="@+id/textView_quantity2"
+        app:layout_constraintTop_toTopOf="@+id/imageView_urgent" />
+
+    <ImageView
+        android:id="@+id/imageView_urgent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/textView_urgent2"
+        app:layout_constraintTop_toBottomOf="@+id/textView_display_number"
+        app:srcCompat="@drawable/unchecked" />
+</androidx.constraintlayout.widget.ConstraintLayout>
